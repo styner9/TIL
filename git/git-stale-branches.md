@@ -23,8 +23,6 @@ $ git-stale-branches.sh
   > no one has committed to in the last three months
 
 #### [`git branch --merged [<commit>]`](https://git-scm.com/docs/git-branch#git-branch---mergedltcommitgt)
-  
-
 - `master`에 머지된 remote 브랜치 목록은 이렇게.
   ```bash
   $ git branch -r --merged master -v 
@@ -36,3 +34,11 @@ $ git-stale-branches.sh
 - 이런게 있구나
   - [`merge-base`](https://git-scm.com/docs/git-merge-base)
   - [`show-branch`](https://git-scm.com/docs/git-show-branch)
+
+
+#### Shell script
+- `getopt(s)`: 옵션 받기 참 힘들다.
+  - https://en.wikipedia.org/wiki/Getopts#Related_programs
+- try~catch?
+  - https://stackoverflow.com/a/22013932
+  - https://stackoverflow.com/a/15656652
