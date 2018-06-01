@@ -1,4 +1,4 @@
-## git-stale-branches.sh
+## [git-stale-branches.sh](git-stale-branches.sh)
 
 ### 왜?
 - 별도 훅을 걸어 놓지 않으면, 머지 후에 오래된 브랜치가 많이 남아있게 된다.
