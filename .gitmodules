@@ -1,0 +1,3 @@
+[submodule "exercises-in-programming-style/python"]
+	path = exercises-in-programming-style/python
+	url = https://github.com/styner9/exercises-in-programming-style.git
