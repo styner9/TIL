@@ -2,3 +2,8 @@
 .vscode/
 .gradle/
 build/
+
+.settings/
+.project
+
+**/word_freqs
