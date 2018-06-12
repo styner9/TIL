@@ -5,10 +5,6 @@ import java.nio.file.StandardOpenOption
 
 fun main(args: Array<String>) {
 
-    fun open(filename: String): File {
-        return File(object {}.javaClass.getResource(filename).toURI())
-    }
-
     // PART 1
     var data = arrayOf(
             // Load the list of stop words
@@ -37,10 +33,7 @@ fun main(args: Array<String>) {
     }.let { RandomAccessFile(it, "rwd") }
 
     // Open the input file
-    open(args.let {
-        if (it.size == 1) it[0]
-        else "input.txt"
-    }).useLines { lines ->
+    open(inputFilename(args)).useLines { lines ->
         // Loop over input file's lines
         lines.forEach {
             data[1] = it
