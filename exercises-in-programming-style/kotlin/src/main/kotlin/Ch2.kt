@@ -109,7 +109,7 @@ fun main(args: Array<String>) {
         heap["i"] = stack.pop()
 
         val (w, f) = stack.pop() as Map.Entry<String, Int>
-        println("$w - $f")
+        println("#${heap["i"] as Int + 1}: $w - $f")
 
         stack.push(heap["i"]!!)
         stack.push(1)
