@@ -15,3 +15,5 @@ enum class Input(val filename: String) {
     MEDIUM("pride-and-prejudice-head.txt"),
     LONG("pride-and-prejudice.txt");
 }
+
+data class MutablePair(var first: String, var second: Int)

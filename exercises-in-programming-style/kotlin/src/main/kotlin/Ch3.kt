@@ -1,7 +1,5 @@
-class Pair(var first: String, var second: Int)
-
 fun main(args: Array<String>) {
-    val wordFreqs = mutableListOf<Pair>()
+    val wordFreqs = mutableListOf<MutablePair>()
 
     val stopWords = open("stop_words.txt").useLines { lines ->
         lines.map { it.split(",") }.flatten().toList().map { it.toLowerCase() }
@@ -39,7 +37,7 @@ fun main(args: Array<String>) {
                             }
 
                             if (!found) {
-                                wordFreqs.add(Pair(word, 1))
+                                wordFreqs.add(MutablePair(word, 1))
                             } else if (wordFreqs.size > 1) {
                                 for (n in pairIndex downTo 0) {
                                     if (wordFreqs[pairIndex].second > wordFreqs[n].second) {

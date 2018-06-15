@@ -2,7 +2,7 @@ fun main(args: Array<String>) {
 
     val data = mutableListOf<Char>()
     val words = mutableListOf<String>()
-    val wordFreqs = mutableListOf<Pair>()
+    val wordFreqs = mutableListOf<MutablePair>()
 
     fun readFile(filepath: String) {
         open(filepath).readText().toCharArray().forEach {
@@ -50,7 +50,7 @@ fun main(args: Array<String>) {
                     second += 1
                 }
             } else {
-                wordFreqs.add(Pair(w, 1))
+                wordFreqs.add(MutablePair(w, 1))
             }
         }
     }
