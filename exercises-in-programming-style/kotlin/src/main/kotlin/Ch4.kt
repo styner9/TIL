@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
                 .readText()
                 .trim()
                 .split(",")
-                .plus('a'..'z')
+                .plus(('a'..'z').map { it.toString() })
 
         val indexes = mutableListOf<Int>()
 

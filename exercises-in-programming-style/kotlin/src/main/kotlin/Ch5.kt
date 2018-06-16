@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
         val stopWords = open("stop_words.txt").readText()
                 .trim()
                 .split(",")
-                .plus('a'..'z')
+                .plus(('a'..'z').map { it.toString() })
         return wordList.filter { it !in stopWords }
     }
 
