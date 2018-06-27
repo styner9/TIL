@@ -1,6 +1,16 @@
 import java.io.File
+import java.io.IOException
 
-fun open(filename: String): File = File(object {}.javaClass.getResource(filename).toURI())
+fun open(filename: String): File {
+    return try {
+        File(object {}.javaClass.getResource(filename).toURI())
+    } catch (e: Exception) {
+        throw when(e) {
+            is IOException -> e
+            else -> IOException(e)
+        }
+    }
+}
 
 fun inputFilename(array: Array<String>, default: Input = Input.SHORT): String {
     return if (array.size > 1) {

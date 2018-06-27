@@ -18,4 +18,13 @@ apply plugin: 'kotlin'
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib"
+    compile group: 'org.ini4j', name: 'ini4j', version: '0.5.4'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-configuration2
+    compile group: 'org.apache.commons', name: 'commons-configuration2', version: '2.2'
+}
+
+kotlin {
+    experimental {
+        coroutines 'enable'
+    }
 }
